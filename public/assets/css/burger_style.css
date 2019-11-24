@@ -1,0 +1,49 @@
+body{
+    background:lightcoral url("../img/Burger.png") no-repeat center top;
+    background-attachment: fixed; 
+    background-size: 200px 200px;
+    color: white;
+}
+
+.addBurger{
+
+    text-align: center;
+ 
+}
+
+h3{
+    color:red;
+    text-align: center;
+}
+
+.listOfburger{
+    height: 50px;
+    margin-left: 20%;
+    font-size: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.burgerbg{
+
+    background: cornsilk;
+    color: black; 
+
+}
+
+textarea{
+    width: 400px !important;
+}
+.selectedBurger{
+    text-align: center;
+    margin-left: 50%;
+    background:lightskyblue;
+    height: 40px;
+    width: 300px;
+    border:1px solid lightgray;
+
+}
+.container
+{
+    margin-top:13% !important; 
+}
