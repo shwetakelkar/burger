@@ -11,7 +11,10 @@
             {{else}}
            <div class="listOfburger row">
                <div class = "col-sm-8 burgerbg">
-            {{this.id}}.{{this.burger_name}} </div>
+                   {{#if this.id}}
+                        {{ceil (divide this.id 10)}}.{{this.burger_name}}
+                    {{/if}}
+                 </div>
            <div class = "col-sm-4">
             <button class="btn btn-secondary change-devour" data-id = "{{this.id}}">Devour it!</button></div>
         </div>
@@ -23,8 +26,10 @@
    
            {{#if this.devoured}}
            <div  class ="selectedBurger"> 
-                {{this.id}}.{{this.burger_name}}
-                </div>
+               {{#if this.id}}
+                        {{ceil (divide this.id 10)}}.{{this.burger_name}}
+                {{/if}}
+            </div>
             {{/if}} 
             
             {{/each}}

@@ -31,7 +31,9 @@ var orm = {
     updateOne:function(table_name,col_name,valOfCol,valOfId,cb){
 
         var query = "UPDATE ?? SET ?? = ? WHERE id = ? ";
-        connection.query(query,[table_name,col_name,true,valOfId],function(err,data){
+        if(typeof valOfCol === "string")
+            valOfCol = Boolean(valOfCol);
+        connection.query(query,[table_name,col_name,valOfCol,valOfId],function(err,data){
             if(err){throw err}
             else{
                 cb(data)
