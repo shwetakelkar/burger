@@ -11,9 +11,9 @@
             {{else}}
            <div class="listOfburger row">
                <div class = "col-sm-8 burgerbg">
-                   {{#if this.id}}
-                        {{ceil (divide this.id 10)}}.{{this.burger_name}}
-                    {{/if}}
+                   
+                    {{this.id}}.{{this.burger_name}}
+               
                  </div>
            <div class = "col-sm-4">
             <button class="btn btn-secondary change-devour" data-id = "{{this.id}}">Devour it!</button></div>
@@ -26,9 +26,9 @@
    
            {{#if this.devoured}}
            <div  class ="selectedBurger"> 
-               {{#if this.id}}
-                        {{ceil (divide this.id 10)}}.{{this.burger_name}}
-                {{/if}}
+
+                {{this.id}}.{{this.burger_name}}
+                
             </div>
             {{/if}} 
             
@@ -39,7 +39,7 @@
 </div><br><br>
     
 
-<form action="/api/burgers" method="POST" class= "addBurger">
+<form action = "/api/burgers" method="POST" class= "addBurger">
     <textarea type = "text" name="burger"></textarea><br>
     <button class="btn btn-primary" type="submit">Submit</button>
     <p>Enter a burger you want to eat ckick the "submit" button</p>
