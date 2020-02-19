@@ -6,7 +6,7 @@ var router = express.Router();
 
 var dbName = process.env.CURRENT_DBNAME;
 
-router.get("/Index",function(req,res){
+router.get("/",function(req,res){
     burger.getAllBurger(function(data){
         res.render("index",{allBurgers:data,db:dbName})
     });
@@ -16,11 +16,10 @@ router.get("/Index",function(req,res){
 router.post("/api/burgers",function(req,res){
 
     var burgerName = req.body.burger;
-    if(burgerName != ""){
-        burger.addBurger(burgerName,function(data){
-            res.redirect("/Index"); 
-        })
-    }
+    burger.addBurger(burgerName,function(data){
+        res.redirect("/"); 
+    })
+    
 })
 
 router.put("/api/burgers/:id",function(req,res){

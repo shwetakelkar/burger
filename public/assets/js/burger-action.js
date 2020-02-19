@@ -1,4 +1,14 @@
 $(function() {
+
+  var myForm  = $('.addBurger');
+  var myInput = $('#burger');
+  
+  myForm.on('submit', function(pEvent) {
+      if(myInput.val().trim() === '') {
+          pEvent.preventDefault(); //Prevents the form to be sent
+          alert('Please enter Burger name !!!');
+      }
+  });
   
     $(".change-devour").on("click", function(event) {
 
